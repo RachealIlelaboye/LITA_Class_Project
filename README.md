@@ -153,5 +153,7 @@ select employee.staffid, employee.firstname, employee.gender,employee.hiredate,e
 - Data Validation: Ensuring data quality through validation checks such as  (UNIQUE, NOT NULL, CHECK) to the dataset.
 
 ##VISUALIZATIONS
+https://github.com/RachealIlelaboye/LITA_Class_Project/edit/main/Dashboard%20(2).jpg
 
+https://github.com/RachealIlelaboye/LITA_Class_Project/edit/main/Sales%20LITA.jpg
 

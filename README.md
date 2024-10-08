@@ -29,4 +29,14 @@ The sources of Data uses CSV,International Breweries.csv,excel filesand web data
      
 - Github [SignUp here](https://github.com/join)
    1. For Building Portfolio
-      
+
+### Data Cleaning and Preprocessing
+At the phase of data cleaning and preprocessing, the following actions were performed:
+  1. Removing Duplicates: Identification and removal of duplicate entries from datasets, ensuring data integrity.
+  2. Handling Missing Values: Rows with missing data were removed.
+  3. Data Validation: Data validation rules were set to ensure accurate data entry, such as limiting inputs to specific types, ranges, or predefined lists.
+  4. Data Loading
+  5. Data Formatting
+
+
+

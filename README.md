@@ -62,21 +62,38 @@ Date_of_Birth date,
 HireDate datetime,
 primary key (staffid))
 
-- Inserting Data: You can insert new rows into existing tables using SQL.
-Example: INSERT INTO employees (name, age, department) VALUES ('John', 30, 'Marketing');
-Updating Data: SQL allows data modifications to update existing records, which is useful for correcting data errors or making adjustments.
-Example: UPDATE products SET price = price * 1.1 WHERE category = 'Electronics';
-Deleting Data: Analysts can use SQL to delete irrelevant or outdated data.
-Example: DELETE FROM customers WHERE customer_id = 10;
+- Inserting Data: 
+Example: insert into Employee (staffid, firstname, secondname, gender,Date_of_Birth, hiredate)
+values ( 'AB401', 'ayan', 'olakun', 'female', '1992-08-22', '2018-02-09'),
+( 'AB212', 'okorie', 'mercy', 'female','1988-10-09', '2018-10-09'),
+( 'AB223', 'joshua', 'chukwuemeka', 'male','1980-10-09', '2022-02-09'),
+( 'AB234', 'sanni', 'ibrahim', 'male','1958-10-09', '2019-09-23'),
+( 'AB254', 'mercy', 'olanipekun', 'female','1982-10-09', '2020-02-09'),
+( 'AB249', 'johnson', 'mercy', 'female','1982-10-09', '2019-12-09'),
+( 'AB298', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11'),
+( 'AB260', 'deborah', 'justin', 'female','1982-10-09', '2018-02-09'),
+( 'AB281', 'wale', 'olanipekun', 'male','1982-10-09', '2018-02-09')
+
+- Updating Data: To update existing records, which is useful for correcting data errors or making adjustments.
+Example: insert into [dbo].[Employee]
+values ( 'AB200', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11')
+
+- Deleting Data: To delete irrelevant or outdated data.
+Example: delete from employee
+where staffid  = 'ab281'
 
 ### Data Retrieval (Querying Data)
-   1. Selecting Data: SQL allows analysts to retrieve specific data from large datasets using the SELECT statement. You can pull exactly the data needed from one or multiple tables based on specific criteria.
-    Example: SELECT name, age FROM customers WHERE age > 30;
-  2. Filtering Data: Using the WHERE clause, analysts can filter data based on specific conditions, making it easy to extract subsets of data that meet certain criteria.
-Example: SELECT * FROM orders WHERE order_date BETWEEN '2024-01-01' AND '2024-01-31';
-  3. Sorting Data: SQL allows sorting of results in ascending or descending order using the ORDER BY clause.
+- Selecting Data: To retrieve specific data from large datasets using the SELECT statement. You can pull exactly the data needed from one or multiple tables based on specific criteria.
+    Example: select * from Employee;
+  
+- Filtering Data: Using the WHERE clause, to filter data based on specific conditions, making it easy to extract subsets of data that meet certain criteria.
+Example: SELECT * FROM Salary
+WHERE Staffid = 'AB281';
+
+- Sorting Data: SQL allows sorting of results in ascending or descending order using the ORDER BY clause.
 Example: SELECT * FROM sales ORDER BY sale_amount DESC;
-- Data Aggregation and Summarization
+
+###Data Aggregation and Summarization
   1. Aggregating Data: Aggregation functions such as COUNT(), SUM(), AVG(), MIN(), and MAX() were used to summarize and analyze data.
 Example: SELECT AVG(salary) FROM employees WHERE department = 'Marketing';
   2. Group By Function: The GROUP BY clause was used to group rows that have the same values in specific columns and then apply aggregate functions to each group.

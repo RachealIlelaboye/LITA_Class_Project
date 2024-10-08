@@ -38,5 +38,14 @@ At the phase of data cleaning and preprocessing, the following actions were perf
   4. Data Loading
   5. Data Formatting
 
+### Statistical Analysis
+Descriptive Statistics: Use of functions (e.g., AVERAGE(), Sum(), STDEV(), MIN(), MAX(), COUNT()) provide key statistical summaries to understand central tendencies and data variability.
 
+###Data Visualization
+Conditional Formatting
+Sparklines: These tiny in-cell charts provide a simple way to show trends in data over time, directly within a cell, useful for tracking performance metrics.
+Dashboards: Excel was used to build interactive dashboards that present key metrics and data visualizations, offering a clear snapshot of business performance.
+Data Summarization: Pivot tables allow users to dynamically summarize large datasets, grouping data based on categories or time periods to quickly derive insights.
+Customization: Pivot tables can be easily customized with filters, slicers, and calculated fields to answer specific questions or explore different perspectives.
+Pivot Charts: Coupled with pivot tables, pivot charts visually represent summarized data, making it easier to understand relationships and trends.
 

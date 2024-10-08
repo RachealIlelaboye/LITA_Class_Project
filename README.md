@@ -152,5 +152,6 @@ select employee.staffid, employee.firstname, employee.gender,employee.hiredate,e
 ```
 - Data Validation: Ensuring data quality through validation checks such as  (UNIQUE, NOT NULL, CHECK) to the dataset.
 
+##VISUALIZATIONS
 
 

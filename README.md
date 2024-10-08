@@ -128,13 +128,14 @@ on salary.Staffid = employee.staffid
 inner join Payment
 on Payment.staffid = salary.Staffid
 ```
-  2. Left Join: A LEFT JOIN retrieves all rows from the left table and the matching rows from the right table, returning NULL for missing matches.
+   2. Left Join: A LEFT JOIN retrieves all rows from the left table and the matching rows from the right table, returning NULL for missing matches.
 ```SQL
 select employee.staffid, employee.firstname, employee.gender,employee.hiredate,employee.state_of_origin, Salary.department,Salary.salary
      from employee
      left join Salary
      on salary.Staffid = employee.staffid
 ```
+
 ### Data Integrity and Quality Checks
 - Identifying Duplicates: SQL can easily identify and remove duplicates using the DISTINCT keyword or by finding duplicate entries based on specific columns.
 ```SQL

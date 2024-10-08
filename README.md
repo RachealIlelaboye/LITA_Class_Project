@@ -52,22 +52,24 @@ Pivot Charts: Coupled with pivot tables, pivot charts visually represent summari
 
 ## SQL
 ### Creating and Modifying Data Models
-Table Creation: SQL enables analysts to create new tables in a database to store specific datasets for analysis or reporting.
-Example:
-sql
-Copy code
-CREATE TABLE new_sales_data (
-    sale_id INT PRIMARY KEY,
-    product_id INT,
-    sale_amount DECIMAL(10, 2)
-);
-Inserting Data: You can insert new rows into existing tables using SQL.
+- Table Creation: SQL was used to create new tables in a database to store specific datasets for analysis or reporting.
+Example: CREATE TABLE Employee (
+staffid varchar (10) not null,
+FirstName varchar (255) NOT NULL,
+SecondName varchar (255),
+Gender varchar (10),
+Date_of_Birth date,
+HireDate datetime,
+primary key (staffid))
+
+- Inserting Data: You can insert new rows into existing tables using SQL.
 Example: INSERT INTO employees (name, age, department) VALUES ('John', 30, 'Marketing');
 Updating Data: SQL allows data modifications to update existing records, which is useful for correcting data errors or making adjustments.
 Example: UPDATE products SET price = price * 1.1 WHERE category = 'Electronics';
 Deleting Data: Analysts can use SQL to delete irrelevant or outdated data.
 Example: DELETE FROM customers WHERE customer_id = 10;
-###SData Retrieval (Querying Data)
+
+### Data Retrieval (Querying Data)
    1. Selecting Data: SQL allows analysts to retrieve specific data from large datasets using the SELECT statement. You can pull exactly the data needed from one or multiple tables based on specific criteria.
     Example: SELECT name, age FROM customers WHERE age > 30;
   2. Filtering Data: Using the WHERE clause, analysts can filter data based on specific conditions, making it easy to extract subsets of data that meet certain criteria.
@@ -81,7 +83,7 @@ Example: SELECT AVG(salary) FROM employees WHERE department = 'Marketing';
 Example: SELECT department, COUNT(*) FROM employees GROUP BY department;
   3. HAVING Clause: This clause allows filtering on aggregated data (after applying the GROUP BY clause).
 Example: SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 10;
-- Data Filtering and Conditional Logic
+### Data Filtering and Conditional Logic
   1. Using Logical Operators: SQL’s logical operators such as AND, OR, and NOT for advanced filtering of data.
 Example: SELECT * FROM products WHERE price > 100 AND category = 'Electronics';
   2. Joining Data from Multiple Tables
@@ -97,7 +99,7 @@ FROM employees
 LEFT JOIN departments ON employees.department_id = departments.department_id;
   Cross Join: SQL also supports CROSS JOIN, which combines all rows from both tables.
   Self Join: A SELF JOIN is used when you need to join a table to itself to compare rows within the same table.
-- Data Transformation and Manipulation
+### Data Transformation and Manipulation
 Creating New Columns: SQL can be used to create new computed columns based on existing data. For example, analysts can derive new fields like total sales or profit.
 Example: SELECT price * quantity AS total_sales FROM orders;
 

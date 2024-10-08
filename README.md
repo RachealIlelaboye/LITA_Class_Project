@@ -2,15 +2,18 @@
 This a documentation of my learning journey with Ladies in Tech Africa(LITA). My first Data Analysis Project with LITA.
 
 ## Project Title:LITA Class
-
+---
 ### Project Description
+---
 This course provides a comprehensive understanding of  data analysis . 
 The course focused on practical, hands-on activities that demonstrate how data analysis skills can be used for real-world data problems.I learnt how to import, clean, analyze, visualize,write SQL queries and interpret data effectively
 
 ### Data Source
+---
 The sources of Data uses CSV,International Breweries.csv,excel filesand web data which can be accessed by the public.
 
 ### Tools Used
+---
 - Microsoft Excel [Download here](https://www.microsoft.com/en-us/microsoft-365/previous-versions/microsoft-excel-2013)
   1. For Data Organization
   2. For Data Cleaning and Preprocessing
@@ -31,6 +34,7 @@ The sources of Data uses CSV,International Breweries.csv,excel filesand web data
    1. For Building Portfolio
 
 ## Excel
+---
 ### Data Cleaning and Preprocessing
 At the phase of data cleaning and preprocessing, the following actions were performed:
 - Removing Duplicates: Identification and removal of duplicate entries from datasets, ensuring data integrity.
@@ -50,6 +54,7 @@ At the phase of data cleaning and preprocessing, the following actions were perf
 - Pivot Charts: Coupled with pivot tables, pivot charts visually represent summarized data, making it easier to understand relationships and trends.
 
 ## SQL
+---
 ### Creating and Modifying Data Models
 - Table Creation: SQL was used to create new tables in a database to store specific datasets for analysis or reporting.
 ```SQL

@@ -119,7 +119,7 @@ SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) >
 SELECT * FROM products WHERE price > 100 AND category = 'Electronics';
 ```
 - Joining Data from Multiple Tables
-  1. Inner Join: INNER JOIN retrieves only the rows that have matching values in both tables.
+  - Inner Join: INNER JOIN retrieves only the rows that have matching values in both tables.
 ```SQL
 select employee.staffid, employee.firstname, employee.gender,employee.hiredate,employee.state_of_origin,Salary.department, Salary.salary, Payment.Account_No, Payment.Bank, Payment.Payment_Method
 from employee
@@ -128,7 +128,7 @@ on salary.Staffid = employee.staffid
 inner join Payment
 on Payment.staffid = salary.Staffid
 ```
-   2. Left Join: A LEFT JOIN retrieves all rows from the left table and the matching rows from the right table, returning NULL for missing matches.
+   - Left Join: A LEFT JOIN retrieves all rows from the left table and the matching rows from the right table, returning NULL for missing matches.
 ```SQL
 select employee.staffid, employee.firstname, employee.gender,employee.hiredate,employee.state_of_origin, Salary.department,Salary.salary
      from employee

@@ -11,6 +11,8 @@ The course focused on practical, hands-on activities that demonstrate how data a
 The sources of Data uses CSV,International Breweries.csv,excel filesand web data which can be accessed by the public.
 
 ### Tools Used
-Microsoft Excel for Data Organization, Data Cleaning and Preprocessing,Analysis, Visualizations,Data Summarization.
-SQL (Structured Query Language) for Querying data, Data Aggregation,Data Filtering, Data Manipulation, Data Integrity Check and Data Exporting.
-Github for Building Portfolio.
+-Microsoft Excel for Data Organization, Data Cleaning and Preprocessing,Analysis, Visualizations,Data Summarization.
+
+-SQL (Structured Query Language) for Querying data, Data Aggregation,Data Filtering, Data Manipulation, Data Integrity Check and Data Exporting.
+
+-Github for Building Portfolio.

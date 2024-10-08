@@ -94,37 +94,50 @@ WHERE Staffid = 'AB281';
 Example: SELECT * FROM sales ORDER BY sale_amount DESC;
 
 ###Data Aggregation and Summarization
-  1. Aggregating Data: Aggregation functions such as COUNT(), SUM(), AVG(), MIN(), and MAX() were used to summarize and analyze data.
-Example: SELECT AVG(salary) FROM employees WHERE department = 'Marketing';
-  2. Group By Function: The GROUP BY clause was used to group rows that have the same values in specific columns and then apply aggregate functions to each group.
-Example: SELECT department, COUNT(*) FROM employees GROUP BY department;
-  3. HAVING Clause: This clause allows filtering on aggregated data (after applying the GROUP BY clause).
-Example: SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 10;
-### Data Filtering and Conditional Logic
-  1. Using Logical Operators: SQL’s logical operators such as AND, OR, and NOT for advanced filtering of data.
-Example: SELECT * FROM products WHERE price > 100 AND category = 'Electronics';
-  2. Joining Data from Multiple Tables
-Inner Join: SQL makes it easy to combine data from multiple related tables using joins. INNER JOIN retrieves only the rows that have matching values in both tables.
-Example:
-SELECT customers.name, orders.order_id 
-FROM customers 
-  INNER JOIN orders ON customers.customer_id = orders.customer_id;
-  Left Join: A LEFT JOIN retrieves all rows from the left table and the matching rows from the right table, returning NULL for missing matches.
-Example:
-SELECT employees.name, departments.department_name 
-FROM employees 
-LEFT JOIN departments ON employees.department_id = departments.department_id;
-  Cross Join: SQL also supports CROSS JOIN, which combines all rows from both tables.
-  Self Join: A SELF JOIN is used when you need to join a table to itself to compare rows within the same table.
-### Data Transformation and Manipulation
-Creating New Columns: SQL can be used to create new computed columns based on existing data. For example, analysts can derive new fields like total sales or profit.
-Example: SELECT price * quantity AS total_sales FROM orders;
+- Aggregating Data: Aggregation functions such as COUNT(), SUM(), AVG(), MIN(), and MAX() were used to summarize and analyze data.
+Example: SELECT AVG(salary) AS AVERAGESALARY FROM Salary
 
- 3. Data Integrity and Quality Checks
-  Identifying Duplicates: SQL can easily identify and remove duplicates using the DISTINCT keyword or by finding duplicate entries based on specific columns.
+- Group By Function: The GROUP BY clause was used to group rows that have the same values in specific columns and then apply aggregate functions to each group.
+Example: SELECT department, COUNT(*) FROM employees GROUP BY department;
+
+- HAVING Clause: This clause allows filtering on aggregated data (after applying the GROUP BY clause).
+Example: SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 10;
+
+### Data Filtering and Conditional Logic
+- Using Logical Operators: SQL’s logical operators such as AND, OR, and NOT for advanced filtering of data.
+Example: SELECT * FROM products WHERE price > 100 AND category = 'Electronics';
+
+- Joining Data from Multiple Tables
+    1. Inner Join: INNER JOIN retrieves only the rows that have matching values in both tables.
+Example:select employee.staffid,
+           employee.firstname, 
+		   employee.gender,
+		   employee.hiredate,
+			employee.state_of_origin,
+			Salary.department,
+			 Salary.salary,
+			 Payment.Account_No,
+			 Payment.Bank,
+			 Payment.Payment_Method
+from employee
+inner join Salary
+on salary.Staffid = employee.staffid
+inner join Payment
+on Payment.staffid = salary.Staffid
+
+   2. Left Join: A LEFT JOIN retrieves all rows from the left table and the matching rows from the right table, returning NULL for missing matches.
+Example: select employee.staffid, employee.firstname, employee.gender,
+			 employee.hiredate,employee.state_of_origin, Salary.department,
+			 Salary.salary
+     from employee
+     left join Salary
+     on salary.Staffid = employee.staffid
+    
+### Data Integrity and Quality Checks
+- Identifying Duplicates: SQL can easily identify and remove duplicates using the DISTINCT keyword or by finding duplicate entries based on specific columns.
 Example: SELECT DISTINCT customer_id FROM orders;
-  Checking for Missing Data: SQL can be used to detect missing or incomplete data using IS NULL or IS NOT NULL conditions.
+- Checking for Missing Data: SQL can be used to detect missing or incomplete data using IS NULL or IS NOT NULL conditions.
 Example: SELECT * FROM customers WHERE email IS NULL;
-  Data Validation: SQL helps in ensuring data quality through validation checks such as applying constraints (UNIQUE, NOT NULL, CHECK) to the dataset.
+- Data Validation: Ensuring data quality through validation checks such as  (UNIQUE, NOT NULL, CHECK) to the dataset.
 
 

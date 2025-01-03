@@ -105,7 +105,7 @@ WHERE Staffid = 'AB281';
 ```SQL
 SELECT * FROM sales ORDER BY sale_amount DESC;
 ```
-###Data Aggregation and Summarization
+### Data Aggregation and Summarization
 - Aggregating Data: Aggregation functions such as COUNT(), SUM(), AVG(), MIN(), and MAX() were used to summarize and analyze data.
 ```SQL
  SELECT AVG(salary) AS AVERAGESALARY FROM Salary
@@ -152,7 +152,7 @@ select employee.staffid, employee.firstname, employee.gender,employee.hiredate,e
 ```
 - Data Validation: Ensuring data quality through validation checks such as  (UNIQUE, NOT NULL, CHECK) to the dataset.
 
-##VISUALIZATIONS
+## VISUALIZATIONS
 
 ![Dashboard (2)](https://github.com/user-attachments/assets/c513f249-3a0a-4e0f-9f15-c0cc74851477)
 
